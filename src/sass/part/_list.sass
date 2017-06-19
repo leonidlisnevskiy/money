@@ -1,1 +1,40 @@
 // List
+ul.list
+	font-size: 0
+	&-wave
+		width: 100%
+		li
+			display: inline-block
+			vertical-align: top
+		li:nth-child(odd)
+			background-color: $blue
+		li:nth-child(even)
+			background-color: $white
+
+.wave
+	display: inline-block
+	text-align: center
+	padding: 65px 10px
+	max-width: 263px
+	border-radius: 100px
+	box-shadow: 3px 2px 5px 4px $black
+	width: 100%
+	font-size: 0
+	&__top
+		.icon-centered
+			text-align: center
+			display: inline-block
+			width: 129px
+			border-radius: 50%
+			height: 129px
+			i
+				margin: 0 auto
+				display: inline-block
+				vertical-align: middle
+	&__bottom
+		p
+			font-size: $text-reg //16px
+			+font-family($newroman)
+			display: inline-block
+			font-weight: bold
+			text-transform: uppercase

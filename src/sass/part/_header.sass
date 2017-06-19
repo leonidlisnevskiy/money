@@ -10,3 +10,26 @@
 	position: fixed
 	will-change: box-shadow, border-bottom
 	transition: all .24s ease-in-out
+	font-size: 0
+	overflow: hidden
+	&-shape
+		display: inline-block
+		position: relative
+		width: 100%
+		max-width: 1170px
+		padding: 0 3px
+		+clr
+		&:before,
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			top: 0
+			background-color: $blue
+			width: 22222px
+			height: 100%
+		&:before
+			left: 100%
+		&:after
+			right: 100%
+

@@ -6,13 +6,26 @@
 	color: $white
 	display: inline-block
 	text-align: center
-	font-size: $text-sm //14px
+	+font-family($gothampro-reg)
+	font-size: $text-reg //16px
 	text-decoration: none
 	background: none
 	position: relative
-	will-change: transition, color
+	line-height: $line-height-base //1.36
+	padding: 10px 40px
+	will-change: transition, color, background-color
 	transition: all .24s ease-in-out
 	&:active
 		top: 1px
+	&:hover
+		color: $black
 	&-nav
 		display: none
+		background-color: $white
+	&-blue
+		background-color: $blue
+		color: $white
+		border: 1px solid $blue
+		&:hover
+			background-color: $white
+			color: $blue
