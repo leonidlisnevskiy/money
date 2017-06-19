@@ -10,6 +10,8 @@ p
 	color: $text
 	font-size: $text-reg //16px
 	line-height: $line-height-base //1.36
+	font-weight: normal
+	font-style: normal
 	> a
 		color: $blue
 		text-decoration: underline
@@ -22,7 +24,12 @@ p
 h1, h2, h3, h4, h5, h6
 	color: $text
 	line-height: 1
+	font-weight: normal
+	font-style: normal
 
+h1
+	font-size: $text-lg //36px
+	+font-family($gothampro-reg)
 h2
 	font-size: $text-lg //30px
 h3
