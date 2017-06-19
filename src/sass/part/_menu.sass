@@ -1,1 +1,24 @@
 // Menu
+.menu
+	font-size: 0
+	vertical-align: top
+	&__item
+		display: inline-block
+		vertical-align: top
+		margin-right: 3px
+		&:last-child
+			margin-right: 0
+	&__link
+		display: inline-block
+		vertical-align: top
+		font-size: $text-md //18px
+		color: $white
+		will-change: color, background-color
+		transition: all .24s ease-in-out
+		background-color: $blue
+		text-decoration: none
+		border: 1px solid $blue
+		padding: 30px 60px
+		&:hover
+			background-color: $white
+			color: $blue

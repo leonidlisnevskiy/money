@@ -4,11 +4,9 @@
 {% include "layouts/_head.html" %}
 
 <body class="{{bodyClasses}}">
-	{% include "partials/components/_aside.html" %}
-
 	<!-- BEGIN content -->
 	<main class="{{mainClasses}}">
-		{% include "partials/components/_panel.html" %}
+		{% include "partials/components/_header.html" %}
 		{% block content %}
 
 		{% endblock %}
