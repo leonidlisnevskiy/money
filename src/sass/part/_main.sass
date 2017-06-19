@@ -1,0 +1,194 @@
+main
+	width: 100%
+	+clr
+	padding-left: 200px
+	display: inline-block
+	vertical-align: top
+	will-change: padding-left
+	transition: all .24s ease-in-out
+	.inner
+		padding: 0 30px
+		max-width: 1200px
+		margin: 0
+		+clr
+		&__in
+			+clr
+			padding: 30px 0 50px 0
+
+.forecast
+	font-size: 0
+	.grid__item
+		padding-bottom: 0
+
+
+.counter
+	width: 100%
+	font-size: 0
+	display: inline-block
+	vertical-align: top
+	margin-bottom: 49px
+	+clr
+	&__title
+		display: inline-block
+		font-size: $text-sm //14px
+		line-height: 1.42
+		+font-family($os-bld)
+	&__field
+		display: inline-block
+		width: 100%
+		vertical-align: top
+		background-color: $white-theme
+		&.status-good
+			.proggress:after
+				border-color: #81bb7f
+		&.status-bad
+			.proggress:after
+				border-color: #fd6067
+		&.status-fameless
+			.proggress:after
+				border-color: #f0cb0f
+	&__item
+		margin-bottom: 12px
+		position: relative
+		+child(b)
+		p
+			text-align: right
+			display: inline-block
+			+font-family($os-bld)
+			line-height: 0.9
+			z-index: 9999
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 15px
+			font-size: $text-sm //14px
+		.proggressbar
+			text-align: center
+			position: relative
+		.percentCount
+			color: $text
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			right: 11px
+			line-height: 0.9
+			font-size: $text-sm //14px
+		.proggress
+			font-size: 16px
+			position: relative
+			&:after
+				content: ""
+				display: block
+				position: absolute
+				top: -3px
+				right: 0
+				height: 46px
+				width: 2px
+				background-color: inherit
+				border-right: 3px solid
+		+clr
+	.counters
+		display: inline-block
+		width: 100%
+		max-width: 220px
+		float: right
+
+.main-box
+	display: inline-block
+	vertical-align: top
+	float: right
+	width: calc(100% - 280px)
+.user
+	float: left
+	vertical-align: top
+	max-width: 260px
+	width: 100%
+	margin-right: 20px
+	+clr
+	&-info
+		padding: 35px 0 25px 0
+		p
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+		p a
+			margin-right: 10px
+	.btn-blue
+		float: right
+	&__field
+		&-ava
+			font-size: 0
+			margin: 0 auto 18px
+			overflow: hidden
+			background-image: url("../img/user-pic.png")
+			height: 80px
+			width: 80px
+			+cover
+			will-change: transition, width, height
+			transition: all .24s ease-in-out
+			&.is-active
+				background-image: url("../img/user-ava.png")
+				img
+					display: none
+		a
+			font-size: $text-sm //14px
+			color: #c3cbd6
+			text-decoration: none
+			&.dropdown__caption
+				position: relative
+				padding-right: 12px
+				&:after
+					content: ""
+					display: block
+					position: absolute
+					top: 9px
+					width: 8px
+					height: 5px
+					left: 100%
+					background-image: url("../img/icons/dropdown.png")
+					background-repeat: no-repeat
+					background-position: center center
+			&:hover
+				color: $white
+
+	.title__text-box
+		padding: 0 16px 0 12px
+		p
+			line-height: 58px
+
+
+
+.content
+	+clr
+	display: inline-block
+	vertical-align: top
+	width: 100%
+	font-size: 0
+	.col-left
+		max-width: 330px
+		width: 33.3333%
+		margin-right: 0
+		float: left
+	.col-container
+		width: 64.7777%
+		float: right
+		+clr
+		.row
+			display: inline-block
+			vertical-align: top
+			width: 100%
+			margin-right: -20px
+			+clr
+			&.bordered
+				padding-bottom: 48px
+				margin-bottom: 48px
+				border-bottom: 2px solid $border-light
+				&:nth-child(4n)
+					margin-bottom: 37px
+			&-2-col
+				width: 50%
+				padding: 0 20px 0 0
+				display: inline-block
+				vertical-align: top
+				&:last-child
+					padding: 0
