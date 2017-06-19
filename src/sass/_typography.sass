@@ -1,22 +1,20 @@
 // Typography
 +font("opensans-regular", opensans-regular)
 +font("opensans-light", opensans-light)
-+font("opensans-bold", opensans-bold)
++font("opensans-regular", opensans-regular)
++font("gothampro-regular", gothampro-regular)
 
-$os-reg:		 "opensans-regular"
-$os-light:		 "opensans-light"
-$os-bld:		 "opensans-bold"
+$os-reg:				 "opensans-regular"
+$gothampro-reg:		 "gothampro-regular"
 
 // Text
 p
 	color: $text
 	font-size: $text-reg //16px
-	line-height: $line-height-base
+	line-height: $line-height-base //1.36
 	> a
 		color: $blue
 		text-decoration: underline
-	> span
-		+font-family($os-bld)
 	> i
 		display: inline-block
 		vertical-align: middle
@@ -33,7 +31,6 @@ a
 
 // Headings
 h1, h2, h3, h4, h5, h6
-	+font-family($os-reg)
 	color: $text
 	line-height: 1
 

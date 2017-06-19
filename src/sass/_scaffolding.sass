@@ -1,63 +1,21 @@
 //Scaffolding
 body
 	background-color: $body-bg
-	+font-family($os-reg)
-	line-height: $line-height-base
+	+font-family($gothampro-reg)
+	line-height: $line-height-base //1.36
 	font-size: $text-reg //16px
 	color: $text
-	&.is-open
-		main
-			padding-left: 80px
-		.sidebar
-			max-width: 80px
-		.icon-btn-nav:after
-			opacity: 0
-		.icon-btn-nav:before
-			opacity: 1
-		.sidebar__field .menu__link
-			color: transparent
-			font-size: 0
-			text-align: center
-			width: 80px
-		.menu__link .menu__icon
-			margin: 0 auto
-			float: none
-			i
-				margin: 0 auto
-		.user__field
-			&-ava
-				height: 50px
-				width: 50px
-		.user__field a.dropdown__caption
-			font-size: 0
-			display: none
-			opacity: 0
-// Grids & Layout
+
+// Layout
 .inner
 	+clr
 	position: relative
-	padding: 0 30px
-	&__in
-		padding: 30px 0
-		+clr
+	margin: 0 auto
+
 section
 	+clr
 	display: inline-block
 	width: 100%
-
-ul li
-	+clr
-
-.col-left
-	width: 30%
-	float: left
-	margin-right: 60px
-	text-align: center
-
-.col-right
-	display: inline-block
-	width: 64%
-	vertical-align: top
 
 // Text: Align
 .text-center
@@ -66,255 +24,14 @@ ul li
 	text-align: left
 .text-right
 	text-align: right
-.text-lead
-	font-size: $text-lg //30px
+.text-tead
 	text-transform: uppercase
+
+// Text: Size
+.text-lg
+	font-size: $text-lg
 .text-md
 	font-size: $text-md //20px
 	line-height: 1.2 //24px
 .text-sm
 	font-size: $text-sm //14px
-
-.margin-1x-bottom
-	margin-bottom: 35px
-
-.border-bottom
-	padding: 0 20px 50px
-	margin-bottom: 50px
-	border-bottom: 2px solid $border-light
-// Titles
-.title
-	&__in
-		padding: 30px
-		+clr
-	&__shaped
-		padding: 21px 30px 28px
-		background-color: $white-theme
-		border-top: 2px solid $border-light
-		border-bottom: 2px solid $border-light
-		position: relative
-		margin-bottom: 51px
-		.image-centered
-			position: absolute
-			display: block
-			cursor: pointer
-			text-decoration: none
-			font-size: 0
-			border-radius: 50%
-			z-index: 9999
-			top: calc(100% - 26px)
-			left: 50%
-			transform: translateX(-50%)
-			img
-				will-change: transform
-				transition: all .24s ease-in-out
-		&-container
-			width: 100%
-			will-change: opacity, height
-			transition: all .24s ease-in-out
-			height: 0
-			visibility: hidden
-			overflow: hidden
-			opacity: 0
-			&.is-visible
-				height: 100%
-				opacity: 1
-				visibility: visible
-				overflow: visible
-			p
-				font-size: $text-sm
-	&__text
-		display: inline-block
-		+font-family($os-bld)
-	&__text-box
-		padding: 18px 16px 10px 12px
-		background-color: $white-theme
-		border: 2px solid $border-light
-		border-radius: 2px
-		&.padding-normaly
-			width: 210px
-			display: inline-block
-			vertical-align: top
-			padding: 23px 16px 23px 12px
-		&.box-md
-			padding: 18px 16px 50px 14px
-			float: right
-			margin-top: 20px
-			width: 100%
-			max-width: 79%
-			p
-				line-height: 1.33
-		+clr
-		i
-			float: right
-		p
-			display: inline-block
-			font-size: $text-sm //14px
-			vertical-align: top
-	.btn
-		float: right
-		&-yellow
-			margin-right: 10px
-
-.borrowing
-	display: inline-block
-	vertical-align: top
-	margin-right: 20px
-	float: left
-	margin-top: 20px
-	ul
-		margin-top: 95px
-// map
-.map__container
-	font-size: 0
-	iframe
-		height: 420px
-
-// recommended
-.recommended
-	display: inline-block
-	vertical-align: top
-	margin-right: 20px
-	float: left
-	text-align: left
-	&__text
-		margin-bottom: 14px
-		line-height: 1
-.slider
-	display: inline-block
-	vertical-align: top
-	float: left
-	min-width: 200px
-	margin-right: 20px
-
-.petition
-	margin-bottom: 22px
-	padding: 20px 10px
-	text-align: center
-	p
-		line-height: 1
-	&--good
-		background-color: $green
-		p
-			color: $white
-			font-size: 20px
-			+font-family($os-bld)
-
-.noUi
-	&-target
-		margin: 25px auto 60px
-	&-connect
-		border-radius: 0
-.circle-pulsar
-	position: relative
-	width: 80px
-	height: 80px
-	display: inline-block
-	line-height: 80px
-	text-align: center
-	vertical-align: middle
-	&:after, &:before
-		content: ""
-		display: block
-		border-radius: 50%
-		position: absolute
-	&:after
-		top: 0
-		width: 100%
-		height: 100%
-		background-color: $yellow
-		margin: 0 auto
-		z-index: 1
-		top: 50%
-		left: 50%
-		transform: translate(-50%, -50%)
-		width: 150px
-		height: 150px
-	&:before
-		box-shadow: 0 0 0 10px $white, 0 0 0 20px $yellow, 0 0 0 30px $white, 0 0 0 40px $yellow
-		height: 100%
-		width: 100%
-		z-index: 2
-	p
-		font-size: 36px
-		color: $text
-		display: inline-block
-		position: relative
-		line-height: 1
-		vertical-align: middle
-		z-index: 9999
-		+font-family($os-bld)
-
-.field
-	padding: 50px 0
-	border-bottom: 2px solid $border-light
-	font-size: 0
-	vertical-align: top
-	+clr
-	&:last-child
-		border-bottom: none
-	&:first-child
-		padding-top: 37px
-	p
-		display: inline-block
-	&__aside
-		width: 100%
-		text-align: left
-		max-width: 25%
-		float: left
-		vertical-align: top
-		display: inline-block
-		padding-right: 30px
-		+clr
-		p
-			text-transform: uppercase
-			+font-family($os-bld)
-		a
-			font-size: $text-sm //14px
-			display: inline-block
-			color: $blue
-			float: right
-			text-decoration: underline
-			cursor: pointer
-		.btn
-			margin-top: 38px
-			display: block
-		&--solo
-			.btn
-				margin-bottom: 30px
-			p
-				display: block
-				text-transform: none
-	&__content
-		float: right
-		max-width: 75%
-		.card
-			min-height: 150px
-
-// bg-variants
-.bg-overlay
-	position: absolute
-	width: 100%
-	height: 100%
-	top: 0
-	left: 0
-	right: 0
-	bottom: 0
-	z-index: 0
-	&:before
-		content: ''
-		display: block
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		height: 100%
-		width: 100%
-	&.bg-overlay--gray
-		&:before
-			background-color: rgba(#484848, .85)
-	&.bg-overlay--white
-		&:before
-			background-color: rgba($white, .80)
-			+cover
