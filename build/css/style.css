@@ -63,6 +63,8 @@ body.is-fixed .header { border-bottom: 2px solid #fff; box-shadow: 0 0 0 1px #00
 section { display: inline-block; width: 100%; }
 section:after { content: ""; display: table; clear: both; }
 
+.map-container { line-height: 0; }
+
 .text-center { text-align: center; }
 
 .text-left { text-align: left; }
@@ -122,13 +124,6 @@ ul.list-wave li:nth-child(even) .wave__top .icon-centered { background-color: #0
 ul.list-wave li:nth-child(even) .wave__bottom { background-color: #002bef; }
 ul.list-wave li:nth-child(even) .wave__bottom p { color: #fff; }
 
-.wave { display: inline-block; text-align: center; max-width: 263px; border-radius: 100px; overflow: hidden; box-shadow: 5px 6px 8px 0px rgba(179, 179, 179, 0.86); width: 100%; font-size: 0; }
-.wave__top { padding: 65px 10px 100px; display: inline-block; vertical-align: middle; width: 100%; }
-.wave__top .icon-centered { text-align: center; display: inline-block; width: 129px; vertical-align: middle; border-radius: 50%; height: 129px; position: relative; }
-.wave__top .icon-centered i { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
-.wave__bottom { padding: 100px 10px; }
-.wave__bottom p { font-size: 16px; font-family: "Times New Roman", Arial, sans-serif; display: inline-block; font-weight: bold; text-transform: uppercase; }
-
 .main { background-color: transparent; padding-top: 87px; }
 
 .preview { text-align: center; }
@@ -150,3 +145,10 @@ ul.list-wave li:nth-child(even) .wave__bottom p { color: #fff; }
 
 .footer { background-color: #002bef; padding: 35px 0 55px; }
 .footer p { font-family: "Times New Roman", Arial, sans-serif; font-weight: 400; font-size: 14px; color: #fff; line-height: 1.42; letter-spacing: 0.028em; }
+
+.wave { display: inline-block; text-align: center; max-width: 263px; border-radius: 100px; overflow: hidden; box-shadow: 5px 6px 8px 0px rgba(179, 179, 179, 0.86); width: 100%; font-size: 0; }
+.wave__top { padding: 65px 10px 100px; display: inline-block; vertical-align: middle; width: 100%; }
+.wave__top .icon-centered { text-align: center; display: inline-block; width: 129px; vertical-align: middle; border-radius: 50%; height: 129px; position: relative; }
+.wave__top .icon-centered i { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.wave__bottom { padding: 100px 10px; }
+.wave__bottom p { font-size: 16px; font-family: "Times New Roman", Arial, sans-serif; display: inline-block; font-weight: bold; text-transform: uppercase; }
