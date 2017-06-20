@@ -28,6 +28,10 @@ gulp.task('copy:vendor', function() {
 	gulp.src(config.src.vendor + '*.css')
 	.pipe(gulp.dest(config.build.css + 'vendor/'));
 
+
+	gulp.src(config.src.vendor + '*.pdf')
+	.pipe(gulp.dest(config.build.root + 'pdf/'));
+
 	// favicon
 	gulp.src([config.src.vendor + '*.png', config.src.vendor + '*.ico'])
 	.pipe(gulp.dest(config.build.root));

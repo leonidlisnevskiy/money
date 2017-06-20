@@ -2,36 +2,63 @@
 ul.list
 	font-size: 0
 	&-wave
+		text-align: center
 		width: 100%
+		margin: 40px auto
 		li
 			display: inline-block
 			vertical-align: top
+			margin-right: 68px
+			&:last-child
+				margin-right: 0
 		li:nth-child(odd)
-			background-color: $blue
+			.wave__top
+				background-color: $blue
+				.icon-centered
+					background-color: $white
+			.wave__bottom
+				background-color: $white
 		li:nth-child(even)
 			background-color: $white
+			.wave__top
+				background-color: $white
+				.icon-centered
+					background-color: $blue
+			.wave__bottom
+				background-color: $blue
+				p
+					color: $white
+
 
 .wave
 	display: inline-block
 	text-align: center
-	padding: 65px 10px
 	max-width: 263px
 	border-radius: 100px
-	box-shadow: 3px 2px 5px 4px $black
+	overflow: hidden
+	box-shadow: 5px 6px 8px 0px rgba(lighten($black, 70), 0.86)
 	width: 100%
 	font-size: 0
 	&__top
+		padding: 65px 10px 100px
+		display: inline-block
+		vertical-align: middle
+		width: 100%
 		.icon-centered
 			text-align: center
 			display: inline-block
 			width: 129px
+			vertical-align: middle
 			border-radius: 50%
 			height: 129px
+			position: relative
 			i
-				margin: 0 auto
-				display: inline-block
-				vertical-align: middle
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
 	&__bottom
+		padding: 100px 10px
 		p
 			font-size: $text-reg //16px
 			+font-family($newroman)

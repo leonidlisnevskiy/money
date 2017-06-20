@@ -31,6 +31,15 @@ $(document).ready(function() {
 		}, 1000);
 	});
 
+	// map scroll disable
+	$('.map-container').click(function () {
+		$('.map-container iframe').css("pointer-events", "auto");
+	});
+
+	$( ".map-container" ).mouseleave(function() {
+		$('.map-container iframe').css("pointer-events", "none");
+	});
+
 // popup
 // $(".js-open-table").click(function(e) {
 // 	e.preventDefault();
