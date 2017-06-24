@@ -1,6 +1,18 @@
 // List
 ul.list
 	font-size: 0
+	margin-bottom: 28px
+	li
+		display: block
+		p
+			font-size: $text-sm //14px
+			+font-family($newroman)
+			letter-spacing: 0.0280em
+			margin-bottom: 0
+			a
+				text-decoration: underline
+				cursor: pointer
+				color: inherit
 	&-wave
 		text-align: center
 		width: 100%

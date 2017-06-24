@@ -26,3 +26,35 @@
 		h1
 			margin-bottom: 20px
 
+.pdf
+	text-align: center
+	margin: 80px auto 120px
+	padding: 250px 0
+	position: relative
+	&:before,
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		left: 50%
+		width: 105px
+		height: 184px
+		transform: translateX(-50%)
+		background-repeat: no-repeat
+		background-position: center center
+	&:before
+		background-image: url("../img/pdf-down.png")
+		top: 0
+	&:after
+		background-image: url("../img/pdf-up.png")
+		bottom: 0
+	a
+		text-decoration: none
+		+font-family($os-reg)
+		font-size: $text-reg //16px
+		line-height: 1.25
+		display: block
+		margin-bottom: 14px
+		color: $black
+		&:hover
+			text-decoration: underline

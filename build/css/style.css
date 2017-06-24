@@ -30,15 +30,18 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 @font-face { font-family: "opensans-regular"; src: url("../fonts/opensans-regular.eot"); src: url("../fonts/opensans-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-regular.woff2") format("woff2"), url("../fonts/opensans-regular.woff") format("woff"), url("../fonts/opensans-regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "gothampro-regular"; src: url("../fonts/gothampro-regular.eot"); src: url("../fonts/gothampro-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/gothampro-regular.woff2") format("woff2"), url("../fonts/gothampro-regular.woff") format("woff"), url("../fonts/gothampro-regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-p { color: #000; font-size: 16px; line-height: 1.36; font-weight: normal; font-style: normal; }
-p > a { color: #002bef; text-decoration: underline; }
+p { color: #000; font-size: 16px; line-height: 1.36; font-weight: normal; font-family: "Times New Roman", Arial, sans-serif; font-style: normal; margin-bottom: 28px; }
+p > a { color: inherit; text-decoration: underline; }
 p > i { display: inline-block; vertical-align: middle; margin-right: 10px; }
 
 h1, h2, h3, h4, h5, h6 { color: #000; line-height: 1; font-weight: normal; font-style: normal; }
+h1.title-sub, h2.title-sub, h3.title-sub, h4.title-sub, h5.title-sub, h6.title-sub { text-transform: uppercase; font-family: "Times New Roman", Arial, sans-serif; font-weight: bold; letter-spacing: 0.028em; margin-bottom: 28px; }
+h1.title-red, h2.title-red, h3.title-red, h4.title-red, h5.title-red, h6.title-red { color: #a71818; }
+h1.title-purple, h2.title-purple, h3.title-purple, h4.title-purple, h5.title-purple, h6.title-purple { color: #2210ae; }
 
 h1 { font-size: 36px; font-family: "gothampro-regular", Arial, sans-serif; }
 
-h2 { font-size: 36px; }
+h2 { font-size: 14px; }
 
 h3 { font-size: 18px; }
 
@@ -59,6 +62,8 @@ body.is-fixed .header { border-bottom: 2px solid #fff; box-shadow: 0 0 0 1px #00
 
 .inner { position: relative; margin: 0 auto; max-width: 1170px; padding: 0 15px; }
 .inner:after { content: ""; display: table; clear: both; }
+.inner__in { max-width: 960px; margin: 0 auto; }
+.inner__in:after { content: ""; display: table; clear: both; }
 
 section { display: inline-block; width: 100%; }
 section:after { content: ""; display: table; clear: both; }
@@ -111,7 +116,10 @@ section:after { content: ""; display: table; clear: both; }
 .header-shape:before { left: 100%; }
 .header-shape:after { right: 100%; }
 
-ul.list { font-size: 0; }
+ul.list { font-size: 0; margin-bottom: 28px; }
+ul.list li { display: block; }
+ul.list li p { font-size: 14px; font-family: "Times New Roman", Arial, sans-serif; letter-spacing: 0.028em; margin-bottom: 0; }
+ul.list li p a { text-decoration: underline; cursor: pointer; color: inherit; }
 ul.list-wave { text-align: center; width: 100%; margin: 40px auto; }
 ul.list-wave li { display: inline-block; vertical-align: top; margin-right: 68px; }
 ul.list-wave li:last-child { margin-right: 0; }
@@ -132,6 +140,13 @@ ul.list-wave li:nth-child(even) .wave__bottom p { color: #fff; }
 .preview__desc { display: inline-block; vertical-align: top; float: left; }
 .preview__desc p { font-size: 16px; margin-bottom: 35px; }
 .preview__desc h1 { margin-bottom: 20px; }
+
+.pdf { text-align: center; margin: 80px auto 120px; padding: 250px 0; position: relative; }
+.pdf:before, .pdf:after { content: ""; display: block; position: absolute; left: 50%; width: 105px; height: 184px; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); background-repeat: no-repeat; background-position: center center; }
+.pdf:before { background-image: url("../img/pdf-down.png"); top: 0; }
+.pdf:after { background-image: url("../img/pdf-up.png"); bottom: 0; }
+.pdf a { text-decoration: none; font-family: "opensans-regular", Arial, sans-serif; font-size: 16px; line-height: 1.25; display: block; margin-bottom: 14px; color: #000; }
+.pdf a:hover { text-decoration: underline; }
 
 .menu { font-size: 0; vertical-align: top; display: table; width: 100%; }
 .menu__item { display: inline-block; vertical-align: top; margin-right: 3px; }

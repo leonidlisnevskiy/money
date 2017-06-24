@@ -12,9 +12,11 @@ p
 	font-size: $text-reg //16px
 	line-height: $line-height-base //1.36
 	font-weight: normal
+	+font-family($newroman)
 	font-style: normal
+	margin-bottom: 28px
 	> a
-		color: $blue
+		color: inherit
 		text-decoration: underline
 	> i
 		display: inline-block
@@ -27,12 +29,21 @@ h1, h2, h3, h4, h5, h6
 	line-height: 1
 	font-weight: normal
 	font-style: normal
-
+	&.title-sub
+		text-transform: uppercase
+		+font-family($newroman)
+		font-weight: bold
+		letter-spacing: 0.0280em
+		margin-bottom: 28px
+	&.title-red
+		color: $red
+	&.title-purple
+		color: $blue-dark
 h1
 	font-size: $text-lg //36px
 	+font-family($gothampro-reg)
 h2
-	font-size: $text-lg //30px
+	font-size: $text-sm //14px
 h3
 	font-size: $text-md //18px
 h4
