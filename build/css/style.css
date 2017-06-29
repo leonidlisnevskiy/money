@@ -120,17 +120,23 @@ ul.list { font-size: 0; margin-bottom: 28px; }
 ul.list li { display: block; }
 ul.list li p { font-size: 14px; font-family: "Times New Roman", Arial, sans-serif; letter-spacing: 0.028em; margin-bottom: 0; }
 ul.list li p a { text-decoration: underline; cursor: pointer; color: inherit; }
-ul.list-wave { text-align: center; width: 100%; margin: 40px auto; }
-ul.list-wave li { display: inline-block; vertical-align: top; margin-right: 68px; }
+ul.list-wave { text-align: center; width: 100%; margin: 40px auto; padding-bottom: 40px; }
+ul.list-wave li { display: inline-block; vertical-align: top; margin-right: 68px; position: relative; }
+ul.list-wave li:after { content: ""; display: block; position: absolute; left: 95%; }
 ul.list-wave li:last-child { margin-right: 0; }
+ul.list-wave li:last-child:after { display: none; }
+ul.list-wave li:nth-child(odd) { position: relative; }
+ul.list-wave li:nth-child(odd):after { background-image: url(../img/sprite.png); background-position: -74px -89px; width: 76px; height: 39px; top: 0; }
 ul.list-wave li:nth-child(odd) .wave__top { background-color: #002bef; }
 ul.list-wave li:nth-child(odd) .wave__top .icon-centered { background-color: #fff; }
 ul.list-wave li:nth-child(odd) .wave__bottom { background-color: #fff; }
-ul.list-wave li:nth-child(even) { background-color: #fff; }
+ul.list-wave li:nth-child(even) { background-color: #fff; position: relative; }
+ul.list-wave li:nth-child(even):after { background-image: url(../img/sprite.png); background-position: 0px -163px; width: 75px; height: 38px; top: 100%; }
 ul.list-wave li:nth-child(even) .wave__top { background-color: #fff; }
 ul.list-wave li:nth-child(even) .wave__top .icon-centered { background-color: #002bef; }
 ul.list-wave li:nth-child(even) .wave__bottom { background-color: #002bef; }
 ul.list-wave li:nth-child(even) .wave__bottom p { color: #fff; }
+ul.list-wave.rotate li:last-child:after { background-image: url(../img/sprite.png); background-position: 0px -163px; width: 75px; height: 38px; top: 100%; left: -50px; display: block; -webkit-transform: rotateY(-180deg); transform: rotateY(-180deg); }
 
 .main { background-color: transparent; padding-top: 87px; }
 

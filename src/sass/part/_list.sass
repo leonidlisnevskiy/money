@@ -17,26 +17,53 @@ ul.list
 		text-align: center
 		width: 100%
 		margin: 40px auto
+		padding-bottom: 40px
 		li
 			display: inline-block
 			vertical-align: top
 			margin-right: 68px
+			position: relative
+			&:after
+				content: ""
+				display: block
+				position: absolute
+				left: 95%
 			&:last-child
 				margin-right: 0
+		li:last-child:after
+			display: none
 		li:nth-child(odd)
-			.wave__top
-				background-color: $blue
-				.icon-centered
+			position: relative
+			&:after
+				+sprite($s-icon-arrow-down)
+				top: 0
+			.wave
+				&__top
+					background-color: $blue
+					.icon-centered
+						background-color: $white
+				&__bottom
 					background-color: $white
-			.wave__bottom
-				background-color: $white
 		li:nth-child(even)
 			background-color: $white
-			.wave__top
-				background-color: $white
-				.icon-centered
+			position: relative
+			&:after
+				+sprite($s-icon-arrow-up)
+				top: 100%
+			.wave
+				&__top
+					background-color: $white
+					.icon-centered
+						background-color: $blue
+				&__bottom
 					background-color: $blue
-			.wave__bottom
-				background-color: $blue
-				p
-					color: $white
+					p
+						color: $white
+		&.rotate
+			li:last-child
+				&:after
+					+sprite($s-icon-arrow-up)
+					top: 100%
+					left: -50px
+					display: block
+					transform: rotateY(-180deg)
