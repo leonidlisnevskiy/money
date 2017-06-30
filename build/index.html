@@ -41,7 +41,7 @@
         </div>
       </header>
       <!-- END header -->
-      <section class="preview">
+      <section class="preview" id="homepage">
         <div class="inner">
           <div class="preview-container">
             <div class="preview__desc">
@@ -49,14 +49,14 @@
               <p>Мы работаем быстро, без залога и поручителей.
                 <br>Выдаем займы на выгодных условиях.
                 <br>Нам доверяют!</p>
-              <button type="button" class="btn btn-blue">Заказать обратный звонок</button>
+              <button type="button" class="btn btn-blue js-open-callback">Заказать обратный звонок</button>
             </div>
           </div>
           <!-- END preview-container -->
         </div>
       </section>
       <!-- END preview -->
-      <section id="homepage">
+      <section>
         <div class="inner">
           <ul class="list list-wave">
             <li>
@@ -272,6 +272,20 @@
         </div>
       </footer>
       <!-- END footer -->
+      <div class="popup popup-callback js-callback">
+        <div class="popup-container">
+          <button class="btn-close js-close-callback" type="button" title="Закрыть">
+            <i class="icon-close"></i>
+          </button>
+          <h3>Заказать обратный звонок</h3>
+          <form action="/">
+            <input type="text" placeholder="Ваше имя" required="">
+            <input type="text" placeholder="Ваш контактный номер телефона" required="">
+            <button type="submit" class="btn btn-blue" title="Отправить">Отправить</button>
+          </form>
+        </div>
+      </div>
+      <!-- END popup -->
     </main>
     <!-- END content -->
     <!-- BEGIN scripts -->

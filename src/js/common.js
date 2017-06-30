@@ -40,16 +40,15 @@ $(document).ready(function() {
 		$('.map-container iframe').css("pointer-events", "none");
 	});
 
-// popup
-// $(".js-open-table").click(function(e) {
-// 	e.preventDefault();
-// 	$(".js-table").toggleClass("is-active");
-// });
+	$(".js-open-callback").click(function(e) {
+		e.preventDefault();
+		$(".js-callback").toggleClass("is-active");
+	});
 
-// $(".js-close-table").click(function(e) {
-// 	e.preventDefault();
-// 	$(".js-table").removeClass("is-active");
-// });
+	$(".js-close-callback").click(function(e) {
+		e.preventDefault();
+		$(".js-callback").removeClass("is-active");
+	});
 
 
 });
