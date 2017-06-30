@@ -35,3 +35,36 @@
 		background-color: transparent
 		background-image: none
 		cursor: pointer
+
+
+input
+	border: 1px solid $gray
+	display: inline-block
+	width: 100%
+	vertical-align: top
+	+font-family($gothampro-reg)
+	line-height: 1
+	padding: 11px 14px
+	font-size: 16px
+	margin-bottom: 23px
+	color: #010000
+	+placeholder(#010000)
+	transition: all .24s ease-in-out
+	will-change: box-shadow
+	&:focus
+		outline: none
+	&:hover
+		box-shadow: 0 4px 3px 0 rgba($gray, .50)
+
+textarea
+	+font-family($gothampro-reg)
+	color: #010000
+	+placeholder(#010000)
+	font-size: 16px
+	padding: 11px 0 0 14px
+	border: 1px solid $gray
+	box-shadow: 0 2px 3px 0 rgba($gray, .60)
+	&:hover
+		box-shadow: 0 4px 3px 0 rgba($gray, .50)
+	&:focus
+		outline: none
