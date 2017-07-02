@@ -18,6 +18,10 @@ $window.scroll(function() {
 
 
 $(document).ready(function() {
+	$("[data-fancybox]").fancybox({
+		loop: false
+	});
+
 	$(".js-btn-nav").click(function() {
 		$body.toggleClass("is-open");
 	});

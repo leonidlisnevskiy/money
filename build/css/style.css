@@ -48,14 +48,14 @@ h3 { font-size: 18px; }
 h4 { font-size: 16px; }
 
 i { display: block; }
-i.icon-arrow-up { background-image: url(../img/sprite.png); background-position: 0px -163px; width: 75px; height: 38px; }
-i.icon-arrow-down { background-image: url(../img/sprite.png); background-position: -74px -89px; width: 76px; height: 39px; }
-i.icon-cash { background-image: url(../img/sprite.png); background-position: -89px 0px; width: 78px; height: 71px; }
-i.icon-clock { background-image: url(../img/sprite.png); background-position: 0px 0px; width: 84px; height: 84px; }
-i.icon-close { background-image: url(../img/sprite.png); background-position: -172px -85px; width: 47px; height: 48px; }
-i.icon-home { background-image: url(../img/sprite.png); background-position: 0px -89px; width: 69px; height: 69px; }
-i.icon-list { background-image: url(../img/sprite.png); background-position: -172px 0px; width: 55px; height: 80px; }
-i.icon-rub { background-image: url(../img/sprite.png); background-position: -232px 0px; width: 46px; height: 77px; }
+i.icon-arrow-up { background-image: url(../img/sprite.png); background-position: -81px -168px; width: 75px; height: 38px; }
+i.icon-arrow-down { background-image: url(../img/sprite.png); background-position: 0px -168px; width: 76px; height: 39px; }
+i.icon-cash { background-image: url(../img/sprite.png); background-position: 0px -92px; width: 78px; height: 71px; }
+i.icon-clock { background-image: url(../img/sprite.png); background-position: -92px 0px; width: 84px; height: 84px; }
+i.icon-close { background-image: url(../img/sprite.png); background-position: -241px 0px; width: 47px; height: 48px; }
+i.icon-home { background-image: url(../img/sprite.png); background-position: -83px -92px; width: 69px; height: 69px; }
+i.icon-list { background-image: url(../img/sprite.png); background-position: -181px 0px; width: 55px; height: 80px; }
+i.icon-rub { background-image: url(../img/sprite.png); background-position: -181px -85px; width: 46px; height: 77px; }
 
 body { background-color: #fff; font-family: "gothampro-regular", Arial, sans-serif; line-height: 1.36; font-size: 16px; color: #000; }
 body.is-fixed .header { border-bottom: 2px solid #fff; box-shadow: 0 0 0 1px #002bef; }
@@ -139,17 +139,17 @@ ul.list-wave li:after { content: ""; display: block; position: absolute; left: 9
 ul.list-wave li:last-child { margin-right: 0; }
 ul.list-wave li:last-child:after { display: none; }
 ul.list-wave li:nth-child(odd) { position: relative; }
-ul.list-wave li:nth-child(odd):after { background-image: url(../img/sprite.png); background-position: -74px -89px; width: 76px; height: 39px; top: 0; }
+ul.list-wave li:nth-child(odd):after { background-image: url(../img/sprite.png); background-position: 0px -168px; width: 76px; height: 39px; top: 0; }
 ul.list-wave li:nth-child(odd) .wave__top { background-color: #002bef; }
 ul.list-wave li:nth-child(odd) .wave__top .icon-centered { background-color: #fff; }
 ul.list-wave li:nth-child(odd) .wave__bottom { background-color: #fff; }
 ul.list-wave li:nth-child(even) { background-color: #fff; position: relative; }
-ul.list-wave li:nth-child(even):after { background-image: url(../img/sprite.png); background-position: 0px -163px; width: 75px; height: 38px; top: 100%; }
+ul.list-wave li:nth-child(even):after { background-image: url(../img/sprite.png); background-position: -81px -168px; width: 75px; height: 38px; top: 100%; }
 ul.list-wave li:nth-child(even) .wave__top { background-color: #fff; }
 ul.list-wave li:nth-child(even) .wave__top .icon-centered { background-color: #002bef; }
 ul.list-wave li:nth-child(even) .wave__bottom { background-color: #002bef; }
 ul.list-wave li:nth-child(even) .wave__bottom p { color: #fff; }
-ul.list-wave.rotate li:last-child:after { background-image: url(../img/sprite.png); background-position: 0px -163px; width: 75px; height: 38px; top: 100%; left: -50px; display: block; -webkit-transform: rotateY(-180deg); transform: rotateY(-180deg); }
+ul.list-wave.rotate li:last-child:after { background-image: url(../img/sprite.png); background-position: -81px -168px; width: 75px; height: 38px; top: 100%; left: -50px; display: block; -webkit-transform: rotateY(-180deg); transform: rotateY(-180deg); }
 
 .main { background-color: transparent; padding-top: 87px; }
 
@@ -172,6 +172,17 @@ ul.list-wave.rotate li:last-child:after { background-image: url(../img/sprite.pn
 .contacts form textarea { width: 100%; margin-bottom: 38px; resize: none; }
 .contacts .desc { float: right; }
 .contacts .desc p { margin-bottom: 15px; font-size: 18px; line-height: 1.11; }
+
+.fancy-gallery { font-size: 0; text-align: center; }
+.fancy-gallery a { border-width: 5px; border-style: solid; border-color: transparent; transition: all 0.24s ease-in-out; height: 370px; display: block; overflow: hidden; position: relative; }
+.fancy-gallery a img { max-width: 100%; height: 100%; display: block; margin: 0 auto; }
+.fancy-gallery a:hover { border-color: #002bef; }
+.fancy-gallery a:hover .fancy-desc { opacity: 1; }
+.fancy-desc { background-color: rgba(0, 43, 239, 0.7); position: absolute; top: 0; left: 0; opacity: 0; right: 0; transition: all 0.24s ease-in-out; bottom: 0; width: 100%; padding: 0 50px; height: 100%; }
+.fancy-desc i.icon-lupe-plus { background-image: url(../img/sprite.png); background-position: 0px 0px; width: 87px; height: 87px; margin: 0 auto; position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); -moztransform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); }
+.fancy-desc p { color: #fff; position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); font-size: 16px; margin-bottom: 0; font-weight: bold; text-transform: uppercase; }
+.fancy .grid__item { padding: 0 30px 0 0; }
+.fancy .grid__item:last-child { padding: 0; }
 
 .menu { font-size: 0; vertical-align: top; display: table; width: 100%; }
 .menu__item { display: inline-block; vertical-align: top; margin-right: 3px; }
