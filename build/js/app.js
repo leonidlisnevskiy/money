@@ -41,12 +41,12 @@ $(document).ready(function() {
 	});
 
 	// map scroll disable
-	$('.map-container').click(function () {
-		$('.map-container iframe').css("pointer-events", "auto");
+	$('.grid__item').click(function () {
+		$('.grid__item iframe').css("pointer-events", "auto");
 	});
 
-	$( ".map-container" ).mouseleave(function() {
-		$('.map-container iframe').css("pointer-events", "none");
+	$( ".grid__item" ).mouseleave(function() {
+		$('.grid__item iframe').css("pointer-events", "none");
 	});
 
 	$(".js-open-callback").click(function(e) {

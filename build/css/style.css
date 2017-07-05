@@ -73,6 +73,9 @@ section:after { content: ""; display: table; clear: both; }
 
 .map-container { line-height: 0; }
 
+.maps .grid__item { height: 460px; margin-bottom: 30px; }
+.maps .grid__item p { font-size: 18px; }
+
 .text-center { text-align: center; }
 
 .text-left { text-align: left; }
