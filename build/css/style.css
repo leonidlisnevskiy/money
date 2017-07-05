@@ -56,9 +56,12 @@ i.icon-close { background-image: url(../img/sprite.png); background-position: -2
 i.icon-home { background-image: url(../img/sprite.png); background-position: -83px -92px; width: 69px; height: 69px; }
 i.icon-list { background-image: url(../img/sprite.png); background-position: -181px 0px; width: 55px; height: 80px; }
 i.icon-rub { background-image: url(../img/sprite.png); background-position: -181px -85px; width: 46px; height: 77px; }
+i.icon-up { background-image: url(../img/sprite.png); background-position: -241px -53px; width: 41px; height: 28px; }
 
 body { background-color: #fff; font-family: "gothampro-regular", Arial, sans-serif; line-height: 1.36; font-size: 16px; color: #000; }
 body.is-fixed .header { border-bottom: 2px solid #fff; box-shadow: 0 0 0 1px #002bef; }
+body.is-fixed .btn-up { opacity: 0.7; pointer-events: auto; z-index: 9999; }
+body.is-fixed .btn-up:hover { opacity: 1; }
 
 .inner { position: relative; margin: 0 auto; max-width: 1170px; padding: 0 15px; }
 .inner:after { content: ""; display: table; clear: both; }
@@ -91,6 +94,8 @@ section:after { content: ""; display: table; clear: both; }
 .btn-blue { background-color: #002bef; color: #fff; border: 1px solid #002bef; }
 .btn-blue:hover { background-color: #fff; color: #002bef; }
 .btn-close { border: none; outline: none; background-color: transparent; background-image: none; cursor: pointer; }
+.btn-up { background-color: #002bef; text-decoration: none; text-align: center; cursor: pointer; position: fixed; opacity: 0; pointer-events: none; z-index: -2222; display: block; right: 30px; width: 70px; height: 70px; bottom: 30px; line-height: 70px; will-change: opacity; transition: all 0.25s ease-in-out; border-radius: 50%; font: 0/0 a; text-shadow: none; color: transparent; }
+.btn-up:before { content: ""; display: block; position: absolute; background-image: url(../img/sprite.png); background-position: -241px -53px; width: 41px; height: 28px; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
 input { border: 1px solid #cfcfcf; display: inline-block; width: 100%; vertical-align: top; font-family: "gothampro-regular", Arial, sans-serif; line-height: 1; padding: 11px 14px; font-size: 16px; margin-bottom: 23px; color: #010000; transition: all 0.24s ease-in-out; will-change: box-shadow; }
 input:-moz-placeholder { color: #010000; }

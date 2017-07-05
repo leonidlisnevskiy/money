@@ -35,8 +35,37 @@
 		background-color: transparent
 		background-image: none
 		cursor: pointer
-
-
+	&-up
+		background-color: $blue
+		text-decoration: none
+		text-align: center
+		cursor: pointer
+		position: fixed
+		opacity: 0
+		pointer-events: none
+		z-index: -2222
+		display: block
+		right: 30px
+		width: 70px
+		height: 70px
+		bottom: 30px
+		line-height: 70px
+		will-change: opacity
+		transition: all .25s ease-in-out
+		border-radius: 50%
+		+hidetext
+		&:before
+			content: ""
+			display: block
+			position: absolute
+			+sprite($s-icon-up)
+			left: 50%
+			top: 50%
+			-webkit-transform: translate(-50%, -50%)
+			-moz-transform: translate(-50%, -50%)
+			-ms-transform: translate(-50%, -50%)
+			-o-transform: translate(-50%, -50%)
+			transform: translate(-50%, -50%)
 input
 	border: 1px solid $gray
 	display: inline-block
