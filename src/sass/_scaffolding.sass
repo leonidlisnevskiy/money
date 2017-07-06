@@ -9,20 +9,28 @@ body
 		.header
 			border-bottom: 2px solid $white
 			box-shadow: 0 0 0 1px $blue
+			+r(769)
+				box-shadow: none
+				border-bottom: none
 		.btn-up
-			opacity: .7
 			pointer-events: auto
-			z-index: 9999
-			&:hover
-				opacity: 1
-
+			z-index: 3
+			opacity: 1
+	&.is-open
+		.menu__header
+			-webkit-transform: translateX(0)
+			-moz-transform: translateX(0)
+			-ms-transform: translateX(0)
+			-o-transform: translateX(0)
+			transform: translateX(0)
+			z-index: 4
 // Layout
 .inner
 	+clr
 	position: relative
 	margin: 0 auto
 	max-width: 1170px
-	padding: 0 15px
+	padding: 0 5px
 	&__in
 		max-width: 960px
 		margin: 0 auto
@@ -38,11 +46,39 @@ section
 	&-container
 		line-height: 0
 .maps
+	.grid.grid-double-spacing
+		+r(1266)
+			margin-right: 0
 	.grid__item
-		height: 460px
+		height: 290px
 		margin-bottom: 30px
+		+r(769)
+			width: 100%
+			padding: 0
+			height: auto
+		+r(569)
+			margin-bottom: 10px
+			&:nth-child(even)
+				margin-bottom: 61px
+				padding-bottom: 16px
+				border-bottom: 3px double $blue
+		iframe
+			height: 100%
+			+r(769)
+				min-height: 320px
+			+r(569)
+				min-height: 240px
+			+r(480)
+				min-height: 220px
+			+r(320)
+				height: 200px
 		p
 			font-size: $text-md //18px
+			+r(569)
+				font-size: $text-reg //16px
+				margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
 // Text: Align
 .text-center
 	text-align: center

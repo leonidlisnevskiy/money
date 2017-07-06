@@ -49,6 +49,10 @@
 			background-position: left center
 			padding: 68px 40px 61px 0
 			+clr
+			+r(769)
+				padding: 30px
+				text-align: center
+				max-width: 90%
 			h3
 				display: inline-block
 				vertical-align: top
@@ -56,8 +60,16 @@
 				+font-family($os-reg)
 				font-weight: bold
 				margin-bottom: 32px
+				+r(769)
+					text-shadow: 2px 2px 3px $white
 			form
 				max-width: 350px
 				width: 100%
 				float: right
 				font-size: 0
+				+r(769)
+					max-width: 100%
+					float: none
+				button
+					+r(769)
+						width: 100%

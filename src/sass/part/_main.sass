@@ -2,12 +2,14 @@
 .main
 	background-color: transparent
 	padding-top: 87px
+	+r(769)
+		padding-top: 0
 
 // Preview
 .preview
 	text-align: center
 	&-container
-		padding: 300px 0 333px 0
+		padding: 200px 0 333px 0
 		background-image: url("../img/preview-pic.png")
 		background-repeat: no-repeat
 		background-position: right center
@@ -16,16 +18,45 @@
 		width: 100%
 		+clr
 		vertical-align: top
+		+r(1266)
+			background-size: 569px 669px
+			padding: 200px 0 250px 0
+		+r(1166)
+			background-size: 509px 559px
+			padding: 161px 0 166px 0
+		+r(992)
+			background-position: center center
+			background-size: cover
+		+r(569)
+			background-image: none
+			padding: 30px 0
 	&__desc
 		display: inline-block
 		vertical-align: top
 		float: left
+		+r(992)
+			float: none
+			padding: 30px 10px
+			margin: 0 auto
+			background-color: rgba($white, .7)
+		+r(569)
+			background-color: transparent
+			padding: 0
 		p
 			font-size: $text-reg //16px
 			margin-bottom: 35px
+			+font-family($gothampro-reg)
+			+r(569)
+				margin-bottom: 20px
 		h1
-			margin-bottom: 20px
+			margin: 25px auto 20px
+			+r(1166)
+				font-size: 32px
+			+r(569)
+				font-size: 26px
+				margin: 15px auto
 
+// PDF
 .pdf
 	text-align: center
 	margin: 80px auto 120px
@@ -59,9 +90,18 @@
 		&:hover
 			text-decoration: underline
 
+// contact
 .contacts
 	.grid
 		padding: 40px 0 50px
+		+r(769)
+			padding: 20px 0
+		&__item
+			+r(992)
+				border-top: none
+			+r(769)
+				width: 100%
+				padding: 0
 	form
 		font-size: 0
 		float: left
@@ -71,12 +111,15 @@
 			resize: none
 	.desc
 		float: right
+		+r(769)
+			float: none
+			margin-top: 30px
 		p
 			margin-bottom: 15px
 			font-size: $text-md //18px
 			line-height: 1.11
 
-
+// fancybox
 .fancy
 	&-gallery
 		font-size: 0
@@ -99,6 +142,15 @@
 				border-color: $blue
 				.fancy-desc
 					opacity: 1
+		.grid__item
+			padding: 0 30px 0 0
+			+r(992)
+				padding: 10px
+				width: 50%
+			+r(668)
+				width: 100%
+			&:last-child
+				padding: 0
 	&-desc
 		background-color: rgba($blue, .7)
 		position: absolute
@@ -136,8 +188,9 @@
 			margin-bottom: 0
 			font-weight: bold
 			text-transform: uppercase
-	.grid
-		&__item
-			padding: 0 30px 0 0
-			&:last-child
-				padding: 0
+
+
+//takeborrowing
+.takeborrowing
+	+r(769)
+		text-align: center

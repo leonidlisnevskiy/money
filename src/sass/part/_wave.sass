@@ -3,15 +3,29 @@
 	text-align: center
 	max-width: 263px
 	border-radius: 100px
+	position: relative
 	overflow: hidden
 	box-shadow: 5px 6px 8px 0px rgba(lighten($black, 70), 0.86)
 	width: 100%
 	font-size: 0
+	&-00 .wave__top
+		background-image: url("../img/wave-00.png")
+	&-01 .wave__bottom
+		background-image: url("../img/wave-01.png")
+	&-02 .wave__top
+		background-image: url("../img/wave-02.png")
+	&-03 .wave__top
+		background-image: url("../img/wave-03.png")
+	&-04 .wave__bottom
+		background-image: url("../img/wave-04.png")
 	&__top
+		+cover
 		padding: 65px 10px 100px
 		display: inline-block
 		vertical-align: middle
 		width: 100%
+		+r(569)
+			padding: 30px 10px
 		.icon-centered
 			text-align: center
 			display: inline-block
@@ -27,9 +41,50 @@
 				transform: translate(-50%, -50%)
 	&__bottom
 		padding: 100px 10px
+		+cover
+		+r(569)
+			padding: 60px 16px
 		p
 			font-size: $text-reg //16px
 			+font-family($newroman)
 			display: inline-block
 			font-weight: bold
 			text-transform: uppercase
+
+
+.ocean
+	position: relative
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, $white), color-stop(0, $blue))
+
+.waves
+	background: $blue
+	display: inline-block
+	height: 60%
+	width: 10px
+	position: absolute
+	-webkit-animation-name: dostuff
+	-webkit-animation-duration: 3s
+	-webkit-animation-iteration-count: nfinite
+	-webkit-transition-timing-function: ease-in-out
+	animation-name: dostuff
+	animation-duration: 3s
+	animation-iteration-count: nfinite
+	transition-timing-function: ease-in-out
+
+
+
+@-webkit-keyframes dostuff
+	0%
+		height: 60%
+	50%
+		height: 40%
+	100%
+		height: 60%
+
+@keyframes dostuff
+	0%
+		height: 60%
+	50%
+		height: 40%
+	100%
+		height: 60%

@@ -4,12 +4,32 @@
 	vertical-align: top
 	display: table
 	width: 100%
+	-webkit-transition: transform .33s linear
+	+r(768)
+		position: fixed
+		height: 100%
+		right: 0
+		top: 0
+		z-index: 12
+		width: 300px
+		background-color: $blue
+		-webkit-transform: translateX(100%)
+		transform: translateX(100%)
+		-ms-transform: translateX(100%)
+		padding: 0
+		overflow-y: auto
 	&__item
 		display: inline-block
+		border-right: 3px solid $white
 		vertical-align: top
-		margin-right: 3px
+		+r(1186)
+			width: 20%
+		+r(769)
+			display: block
+			width: 100%
+			border-right: none
 		&:last-child
-			margin-right: 0
+			border-right: none
 	&__link
 		display: inline-block
 		vertical-align: top
@@ -21,6 +41,11 @@
 		text-decoration: none
 		border: 1px solid $blue
 		padding: 30px 64px
+		+r(1186)
+			padding: 30px 5px
+			width: 100%
+		+r(992)
+			font-size: $text-reg //16px
 		&:hover
 			background-color: $white
 			color: $blue

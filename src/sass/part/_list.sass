@@ -18,16 +18,29 @@ ul.list
 		width: 100%
 		margin: 40px auto
 		padding-bottom: 40px
+		+r(769)
+			padding-bottom: 0
+			margin: 15px auto
 		li
 			display: inline-block
 			vertical-align: top
 			margin-right: 68px
 			position: relative
+			+r(992)
+				margin-right: 30px
+			+r(866)
+				margin-right: 20px
+				margin-bottom: 30px
+			+r(569)
+				margin-right: 0
+				margin-bottom: 20px
 			&:after
 				content: ""
 				display: block
 				position: absolute
 				left: 95%
+				+r(992)
+					display: none
 			&:last-child
 				margin-right: 0
 		li:last-child:after
@@ -39,11 +52,11 @@ ul.list
 				top: 0
 			.wave
 				&__top
-					background-color: $blue
+					// background-color: $blue
 					.icon-centered
 						background-color: $white
-				&__bottom
-					background-color: $white
+				// &__bottom
+					// background-color: $white
 		li:nth-child(even)
 			background-color: $white
 			position: relative
@@ -52,11 +65,11 @@ ul.list
 				top: 100%
 			.wave
 				&__top
-					background-color: $white
+					// background-color: $white
 					.icon-centered
 						background-color: $blue
 				&__bottom
-					background-color: $blue
+					// background-color: $blue
 					p
 						color: $white
 		&.rotate
@@ -67,3 +80,5 @@ ul.list
 					left: -50px
 					display: block
 					transform: rotateY(-180deg)
+					+r(992)
+						display: none
