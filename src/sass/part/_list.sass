@@ -21,11 +21,23 @@ ul.list
 		+r(769)
 			padding-bottom: 0
 			margin: 15px auto
+		li p
+			z-index: 3
+			position: relative
 		li
 			display: inline-block
 			vertical-align: top
 			margin-right: 68px
 			position: relative
+			&:last-child
+				margin-right: 0
+			&:after
+				content: ""
+				display: block
+				position: absolute
+				left: 95%
+				+r(992)
+					display: none
 			+r(992)
 				margin-right: 30px
 			+r(866)
@@ -34,42 +46,25 @@ ul.list
 			+r(569)
 				margin-right: 0
 				margin-bottom: 20px
-			&:after
-				content: ""
-				display: block
-				position: absolute
-				left: 95%
-				+r(992)
-					display: none
-			&:last-child
-				margin-right: 0
 		li:last-child:after
 			display: none
 		li:nth-child(odd)
-			position: relative
 			&:after
 				+sprite($s-icon-arrow-down)
 				top: 0
 			.wave
 				&__top
-					// background-color: $blue
 					.icon-centered
 						background-color: $white
-				// &__bottom
-					// background-color: $white
 		li:nth-child(even)
-			background-color: $white
-			position: relative
 			&:after
 				+sprite($s-icon-arrow-up)
 				top: 100%
 			.wave
 				&__top
-					// background-color: $white
 					.icon-centered
 						background-color: $blue
 				&__bottom
-					// background-color: $blue
 					p
 						color: $white
 		&.rotate

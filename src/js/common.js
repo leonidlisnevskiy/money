@@ -12,21 +12,6 @@ $window.scroll(function() {
 });
 
 
-var ocean = document.getElementsByClassName("ocean"),
-waveWidth = 10,
-waveItem = $(".wave"),
-waveCount = Math.floor(waveItem.innerWidth/waveWidth),
-docFrag = document.createDocumentFragment();
-
-for (var i = 0; i < waveCount; i++) {
-	var wave = document.createElement("div");
-	wave.className += " wave";
-	docFrag.appendChild(wave);
-	wave.style.left = i * waveWidth + "px";
-	wave.style.webkitAnimationDelay = (i/100) + "s";
-}
-ocean.appendChild(docFrag);
-
 $(document).ready(function() {
 	$("[data-fancybox]").fancybox({loop: false});
 	$(".js-btn-nav").click(function() {$body.toggleClass("is-open");});
