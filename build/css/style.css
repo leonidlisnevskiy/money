@@ -155,6 +155,10 @@ ul.list-wave { text-align: center; width: 100%; margin: 40px auto; padding-botto
 ul.list-wave li p { z-index: 3; position: relative; }
 ul.list-wave li { display: inline-block; vertical-align: top; margin-right: 68px; position: relative; }
 ul.list-wave li:last-child { margin-right: 0; }
+ul.list-wave li:nth-child(even) .wave__top { background-color: #fff; }
+ul.list-wave li:nth-child(even) .wave__bottom { background-color: #002bef; }
+ul.list-wave li:nth-child(odd) .wave__top { background-color: #002bef; }
+ul.list-wave li:nth-child(odd) .wave__bottom { background-color: #fff; }
 ul.list-wave li:after { content: ""; display: block; position: absolute; left: 95%; }
 ul.list-wave li:last-child:after { display: none; }
 ul.list-wave li:nth-child(odd):after { background-image: url(../img/sprite.png); background-position: 0px -168px; width: 76px; height: 39px; top: 0; }

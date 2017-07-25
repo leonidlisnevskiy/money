@@ -31,6 +31,16 @@ ul.list
 			position: relative
 			&:last-child
 				margin-right: 0
+			&:nth-child(even)
+				.wave__top
+					background-color: $white
+				.wave__bottom
+					background-color: $blue
+			&:nth-child(odd)
+				.wave__top
+					background-color: $blue
+				.wave__bottom
+					background-color: $white
 			&:after
 				content: ""
 				display: block
