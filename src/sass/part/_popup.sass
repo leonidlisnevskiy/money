@@ -35,19 +35,31 @@
 		-ms-transform: translateX(-50%)
 		-o-transform: translateX(-50%)
 	&-callback
-		text-align: right
+		text-align: center
+		label
+			font-size: 12px
+			+font-family($os-reg)
+			span
+				color: $red
+		input[type=checkbox]
+			margin: 0 auto
+			display: inline-block
+			vertical-align: top
+			width: auto
+			&:hover
+				text-shadow: none
+				box-shadow: none
 		.btn-close
 			position: absolute
 			right: 0
 			top: -70px
 			padding: 0
+		.btn.btn-blue
+			float: right
 		.popup-container
 			max-width: 700px
 			margin: 0 auto
-			background-image: url("../img/photo.png")
-			background-repeat: no-repeat
-			background-position: left center
-			padding: 68px 40px 61px 0
+			padding: 30px 45px 45px
 			+clr
 			+r(769)
 				padding: 30px
@@ -63,13 +75,12 @@
 				+r(769)
 					text-shadow: 2px 2px 3px $white
 			form
-				max-width: 350px
-				width: 100%
-				float: right
 				font-size: 0
+				margin: 0 auto
+				text-align: left
+				+clr
 				+r(769)
 					max-width: 100%
-					float: none
 				button
 					+r(769)
 						width: 100%

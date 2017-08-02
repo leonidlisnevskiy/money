@@ -130,7 +130,7 @@ input
 	line-height: 1
 	padding: 11px 14px
 	font-size: 16px
-	margin-bottom: 23px
+	margin-bottom: 20px
 	color: #010000
 	+placeholder(#010000)
 	transition: all .24s ease-in-out
@@ -139,6 +139,15 @@ input
 		outline: none
 	&:hover
 		box-shadow: 0 4px 3px 0 rgba($gray, .50)
+
+input[type=checkbox]
+	margin: 0 auto
+	display: inline-block
+	vertical-align: top
+	width: auto
+	&:hover
+		text-shadow: none
+		box-shadow: none
 
 textarea
 	+font-family($gothampro-reg)

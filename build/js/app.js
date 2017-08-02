@@ -18,13 +18,26 @@ $window.scroll(function() {
 
 
 $(document).ready(function() {
-	$("[data-fancybox]").fancybox({loop: false});
-	$(".js-btn-nav").click(function() {$body.toggleClass("is-open");});
 
-	$(".js-dropdown").click(function(e) {
-		e.preventDefault();
-		$(".js-dropdown-content").toggleClass("is-open");
-	});
+		// transparent input, etx
+		$('input').each(function(){
+			var placeholder = $(this).attr('placeholder');
+
+			$(this).focus(function(){
+				$(this).attr('placeholder', '');
+			});
+			$(this).blur(function(){
+				$(this).attr('placeholder', placeholder);
+			});
+		});
+
+		$("[data-fancybox]").fancybox({loop: false});
+		$(".js-btn-nav").click(function() {$body.toggleClass("is-open");});
+
+		$(".js-dropdown").click(function(e) {
+			e.preventDefault();
+			$(".js-dropdown-content").toggleClass("is-open");
+		});
 
 	// animated scroll
 	$('.js-scroll-to').on("click", function(e){
