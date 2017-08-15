@@ -188,7 +188,7 @@ ul.list-wave.rotate li:last-child:after { background-image: url(../img/sprite.pn
 .pdf a { text-decoration: none; font-family: "opensans-regular", Arial, sans-serif; font-size: 16px; line-height: 1.25; display: block; margin-bottom: 14px; color: #000; }
 .pdf a:hover { text-decoration: underline; }
 
-.contacts .grid { padding: 40px 0 50px; }
+.contacts .grid { padding: 0 0 50px; }
 .contacts form { font-size: 0; float: left; }
 .contacts form textarea { width: 100%; margin-bottom: 38px; resize: none; }
 .contacts .desc { float: right; }
@@ -342,7 +342,15 @@ ul.list-wave.rotate li:last-child:after { background-image: url(../img/sprite.pn
 
  .menu { position: fixed; height: 100%; right: 0; top: 0; z-index: 12; width: 300px; background-color: #002bef; -webkit-transform: translateX(100%); transform: translateX(100%); -ms-transform: translateX(100%); padding: 0; overflow-y: auto; } }
 
+@media only screen and (max-width: 688px) {
+
+ ul.list-wave { display: none; } }
+
 @media only screen and (max-width: 668px) {
+
+ .preview-container { background-image: none; padding: 30px 0; }
+
+ .preview__desc { background-color: transparent; padding: 0; }
 
  .fancy-gallery .grid__item { width: 100%; } }
 
@@ -357,10 +365,6 @@ ul.list-wave.rotate li:last-child:after { background-image: url(../img/sprite.pn
  .maps .grid__item p { font-size: 16px; margin-bottom: 10px; }
 
  ul.list-wave li { margin-right: 0; margin-bottom: 20px; }
-
- .preview-container { background-image: none; padding: 30px 0; }
-
- .preview__desc { background-color: transparent; padding: 0; }
 
  .preview__desc p { margin-bottom: 20px; }
 
